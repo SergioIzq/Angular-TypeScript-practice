@@ -1,0 +1,24 @@
+<div *ngFor="let personaje of personajes" class="table-container">
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Nivel</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ personaje.nombre | uppercase }}</td>
+        <td>{{ personaje.nivel }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <label>Nombre:
+      <input [(ngModel)]="personajeSel.nombre" placeholder="name"/>
+    </label>
+    <button (click)="onSelect(personaje)">Editar Nombre</button>
+  </div>
+</div>
+
+
