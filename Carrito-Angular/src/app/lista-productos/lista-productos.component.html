@@ -1,0 +1,14 @@
+<p>lista-productos works!</p>
+<div *ngFor="let producto of productos">
+  <ul>
+    <li>
+      <a (mouseover)="mostrarDescripcion = true" (mouseout)="mostrarDescripcion = false">
+        {{ producto.nombre }}
+        {{ producto.precio }}
+      </a>
+      <span *ngIf="mostrarDescripcion && producto.descripcion && producto.descripcion.length > 0">
+        Detalles de {{ producto.nombre }}: {{ producto.descripcion }}
+      </span>
+    </li>
+  </ul>
+</div>
